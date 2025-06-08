@@ -14,4 +14,4 @@ Hamming kodları, veri iletiminde karşılaşılan tek bitlik hataları düzeltm
 
 ## 8 Bit veri girişi
 
-![Resim Açıklaması](imag/img1.png)
+![Resim Açıklaması](img/img1.png)
