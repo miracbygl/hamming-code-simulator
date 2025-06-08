@@ -12,6 +12,29 @@ Hamming kodları, veri iletiminde karşılaşılan tek bitlik hataları düzeltm
 - **Hata Düzeltme**: Tek bitlik hatalar düzeltilebilir, çift bitlik hatalar tespit edilebilir.
 - **Görsel Simülasyon**: Hata tespiti ve düzeltme süreçleri görsel olarak kullanıcıya sunulur.
 
-## 8 Bit veri girişi
+##  Veri Girişleri
 
 ![Resim Açıklaması](img/img1.png)
+
+![Resim Açıklaması](img/img11.png)
+
+## Tek Bit Manuel Hata Ekleme
+
+![Resim Açıklaması](img/img2.png)
+
+## Çift Bitlik Manuel Hata Ekleme
+
+![Resim Açıklaması](img/img12.png)
+
+## Tek Bit Hata Düzeltilmesi
+
+![Resim Açıklaması](img/img3.png)
+
+## Çift Bit Hata Tespiti
+
+![Resim Açıklaması](img/img13.png)
+
+
+
+
+
