@@ -5,6 +5,11 @@ Verideki hatalar manuel olarak yapılır, tek ve iki bitlik  hataları tespit ed
 Bu projede 8,16,32 bitlik veriler girdi olarak kabul edilir . 
 Hamming kodları, veri iletiminde karşılaşılan tek bitlik hataları düzeltmek ve çift bitlik hataları tespit etmek için kullanılan  hata düzeltme algoritmasıdır.
 
+## Demm Erişim 
+   [Buradan Erişebilirsiniz](https://miracbygl.github.io/hamming-code-simulator/)
+
+
+
 ## Özellikler
 
 - **Hamming Kodu Oluşturma**: Kullanıcı, veri bitlerini girerek Hamming kodunu oluşturabilir.
@@ -16,11 +21,16 @@ Hamming kodları, veri iletiminde karşılaşılan tek bitlik hataları düzeltm
 
 ![Resim Açıklaması](img/img1.png)
 
+
+
 ![Resim Açıklaması](img/img11.png)
+
+
 
 ## Tek Bit Manuel Hata Ekleme
 
 ![Resim Açıklaması](img/img2.png)
+
 
 ## Çift Bitlik Manuel Hata Ekleme
 
