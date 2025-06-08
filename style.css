@@ -1,0 +1,286 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0;
+}
+
+.kapsayici {
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #00bcd4;
+    font-size: 28px;
+}
+
+h2 {
+    color: #ff9800;
+    font-size: 22px;
+}
+
+.giris-alani,
+.sonuc-alani,
+.hata-alani,
+.duzeltme-alani {
+    margin-top: 25px;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #2c2c2c;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 600;
+    color: #bbbbbb;
+}
+
+/* Input fields left-to-right */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-family: monospace;
+    font-size: 16px;
+    direction: ltr;
+    text-align: left;
+}
+
+.hata-secim {
+    margin: 15px 0;
+}
+
+.hata-secim label {
+    display: inline;
+    margin-right: 20px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 12px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005f99;
+}
+
+/* Bit display area - right to left */
+.bit-alani {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+    justify-content: center;
+    padding: 15px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.bit-kutu {
+    position: relative;
+    width: 40px;
+    text-align: center;
+}
+
+.bit-kutu.kompakt {
+    width: 32px;
+}
+
+.bit {
+    display: block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    margin: 2px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    transition: background-color 0.3s;
+}
+
+.bit.kompakt {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+/* Bit types and states */
+.bit.veri { background-color: #1976d2; }
+.bit.parity { background-color: #4caf50; }
+.bit.genel-parity { background-color: #ff9800; }
+.bit.hatali {
+    background-color: #e53935;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.indis {
+    position: absolute;
+    top: -15px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+}
+
+.bit-kutu.kompakt .indis {
+    font-size: 10px;
+    top: -12px;
+}
+
+/* Text display for binary data - right to left */
+.rtl-text {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    text-align: left;
+    font-family: monospace;
+    letter-spacing: 2px;
+    padding: 5px 10px;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    display: inline-block;
+    min-width: 200px;
+}
+
+/* Results display */
+.veri-gosterim {
+    margin-top: 20px;
+}
+
+.veri-gosterim p,
+.duzeltme-alani p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.veri-gosterim strong,
+.duzeltme-alani strong {
+    min-width: 140px;
+}
+
+/* Color legend */
+.renk-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    background-color: #2c2c2c;
+    border-radius: 4px;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.legend-veri { background-color: #1976d2; }
+.legend-parity { background-color: #4caf50; }
+.legend-genel-parity { background-color: #ff9800; }
+.legend-hatali { background-color: #e53935; }
+
+/* Scrollbar styling */
+.bit-alani::-webkit-scrollbar {
+    height: 8px;
+}
+
+.bit-alani::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 4px;
+}
+
+.bit-alani::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+.bit-alani::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .kapsayici {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .bit-kutu {
+        width: 32px;
+    }
+
+    .bit {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 14px;
+    }
+
+    .rtl-text {
+        min-width: 150px;
+    }
+
+    .veri-gosterim p,
+    .duzeltme-alani p {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .veri-gosterim strong,
+    .duzeltme-alani strong {
+        min-width: 100%;
+    }
+}

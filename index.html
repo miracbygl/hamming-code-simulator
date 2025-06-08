@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamming Kodu Simülatörü</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kapsayici">
+        <h1>Hamming SEC-DED Kod Simülatörü</h1>
+
+        <div class="giris-alani">
+            <label>Veri Uzunluğu:</label>
+            <select name="veri-uzunlugu" id="veri-uzunlugu">
+                <option value="8">8 bit</option>
+                <option value="16">16 bit</option>
+                <option value="32">32 bit</option>
+            </select>
+
+            <label for="veri-girdisi">Veri Girişi:</label>
+            <input type="text" id="veri-girdisi" maxlength="32" placeholder="Sadece 0 ve 1 girin">
+            <button onclick="hammingUret()">Hamming Kodu Üret</button>
+        </div>
+
+        <div class="sonuc-alani">
+            <h2>Hamming Kodlu Veri</h2>
+            <div id="hamming-gosterim" class="bit-alani"></div>
+            <p><strong>Bellek Verisi: </strong><span id="bellek-verisi"></span></p>
+        </div>
+
+        <div class="hata-alani">
+            <h2>Hata Ekleme</h2>
+            <div class="hata-secim">
+                <input type="radio" name="hata-sayisi" value="1" id="tek-hata" checked>
+                <label for="tek-hata">Tek Bit Hatası</label>
+                <input type="radio" name="hata-sayisi" value="2" id="cift-hata">
+                <label for="cift-hata">Çift Bit Hatası</label>
+            </div>
+
+            <div id="tek-hata-girdisi">
+                <label for="hata-konumu">Hatalı Bit Konumu:</label>
+                <input type="number" id="hata-konumu" min="1">
+            </div>
+
+            <div id="cift-hata-girdisi" style="display:none">
+                <label for="hata-konumu1">1. Hatalı Bit:</label>
+                <input type="number" id="hata-konumu1" min="1">
+                <label for="hata-konumu2">2. Hatalı Bit:</label>
+                <input type="number" id="hata-konumu2" min="1">
+            </div>
+
+            <button onclick="hataEkle()">Hata Ekle</button>
+            <p><strong>Hatalı Veri: </strong><span id="hatali-veri"></span></p>
+        </div>
+
+        <div class="duzeltme-alani">
+            <h2>Hata Tespiti ve Düzeltme</h2>
+            <button onclick="hataTespitEt()">Hata Tespit Et ve Düzelt</button>
+            <p><strong>Sendrom: </strong><span id="sendrom"></span></p>
+            <p><strong>Hatalı Bit: </strong><span id="hatali-bit"></span></p>
+            <p><strong>Düzeltilmiş Veri: </strong><span id="duzeltilmis-veri"></span></p>
+        </div>
+
+        <div class="renk-legend">
+            <div class="legend-item"><span class="legend-color legend-veri"></span>Veri Biti</div>
+            <div class="legend-item"><span class="legend-color legend-parity"></span>Parite Biti</div>
+            <div class="legend-item"><span class="legend-color legend-genel-parity"></span>Genel Parite</div>
+            <div class="legend-item"><span class="legend-color legend-hatali"></span>Hatalı Bit</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
